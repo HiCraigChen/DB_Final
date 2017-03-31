@@ -30,13 +30,13 @@
                 <a class="navbar-brand" href="#"><span>場地租借</span>系統</a>
                 <ul class="user-menu">
                     <li class="dropdown pull-right">
-                    <% if(member) {%>
+                    <% if(user_t) {%>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <svg class="glyph stroked male-user">
                                 <use xlink:href="#stroked-male-user"></use>
 
                                  
-                            </svg>  <%= member.name %> <span class="caret"></span></a>    <% } %>
+                            </svg>  <%= user_t.User_Name %> <span class="caret"></span></a>    <% } %>
                         <ul class="dropdown-menu" role="menu">
                            
                            

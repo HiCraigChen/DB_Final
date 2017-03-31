@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/bootstrap-table.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<!--Icons-->
+<script src="js/lumino.glyphs.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
+        <ul class="user-menu">
+          <li class="dropdown pull-right">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> User <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Profile</a></li>
+              <li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li>
+              <li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+              
+    </div><!-- /.container-fluid -->
+  </nav>
+    
+  <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <form role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+    </form>
+    <ul class="nav menu">
+      <li><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Status</a></li>
+      <li class="parent ">
+        <ul class="children collapse" id="sub-item-1">
+          <li>
+            <a class="" href="#">
+              <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Sub Item 1
+            </a>
+          </li>
+          <li>
+            <a class="" href="#">
+              <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Sub Item 2
+            </a>
+          </li>
+          <li>
+            <a class="" href="#">
+              <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Sub Item 3
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li role="presentation" class="divider"></li>
+      <li><a href="login.html"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Login Page</a></li>
+    </ul>
+
+  </div><!--/.sidebar-->
+    
+  <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">     
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+        <li class="active">Status</li>
+      </ol>
+    </div><!--/.row-->
+    
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Status</h1>
+        <table border="0" width="80%" bgcolor="#848b8e">
+          <tbody>
+            <tr><td><font color="#d7d8cc">**表格上灰色部份，表示場地於該時段中不開放。</font></td></tr>
+            <!-- <tr><td><font color="#f4dec4">**表格上橙色部份，表示場地於該時段中已經管理者核可確認借出。</font></td></tr>
+            <tr><td><font color="#d0e4ec">**表格上藍色部份，表示場地於該時段中已被登記借用。</font></td></tr> -->
+            <tr><td><font color="#ffffff">**表格上空白部份，為可供借用之時段。</font></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div><!--/.row-->
+            
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <table data-toggle="table" data-url="tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+                <tbody>
+                  <tr bgcolor="#FFFFCC">
+                    <td rowspan="2">日期</td>
+                    <td rowspan="2">星期</td>
+                    <td colspan="24" align="center">時段</td>
+                  </tr>
+                  <tr bgcolor="#FFFFCC">
+                    <td>00<br>|<br>01</td><td>01<br>|<br>02</td><td>02<br>|<br>03</td><td>03<br>|<br>04</td><td>04<br>|<br>05</td><td>05<br>|<br>06</td><td>06<br>|<br>07</td><td>07<br>|<br>08</td><td>08<br>|<br>09</td><td>09<br>|<br>10</td><td>10<br>|<br>11</td><td>11<br>|<br>12</td><td>12<br>|<br>13</td><td>13<br>|<br>14</td><td>14<br>|<br>15</td><td>15<br>|<br>16</td><td>16<br>|<br>17</td><td>17<br>|<br>18</td><td>18<br>|<br>19</td><td>19<br>|<br>20</td><td>20<br>|<br>21</td><td>21<br>|<br>22</td><td>22<br>|<br>23</td><td>23<br>|<br>24</td>
+                  </tr>
+                                                      
+                  <tr>
+                                               
+
+                      <td><%= UsedList[0].Date.getFullYear()%> / <%= UsedList[0].Date.getMonth()+1%> / <%= UsedList[0].Date.getDate()%></td>
+                      <td><%= UsedList[0].Date.getDay()%></td>
+                      <% UsedList.forEach(function(used) { %>
+                        <% if(used.Available==1){%>
+                            <td>&nbsp;</td>
+                        <%}else{%>
+                            <td bgcolor="#d0e4ec">&nbsp;</td>
+                        <%}%>
+                      <%});%>
+                  </tr>
+                </tbody>
+
+
+            </table>
+            <table algin='center'>
+              <tbody>
+                <tr bgcolor="#FFFFCC">
+                  <td align="center">申請單號</td>
+                  <td align="center">預約單位</td>
+                  <td align="center">連絡人</td>
+                  <td align="center">聯絡電話</td>
+                  <td align="center">e-mail</td>
+                  <td align="center">活動名稱</td>
+                  <td align="center">借用時段</td>
+                </tr>
+                                          
+
+                <tr>
+                        <td>2016000412&nbsp;</td>
+                        <td>新聞系              &nbsp;</td>
+                        <td>吳玲慧              &nbsp;</td>
+                        <td>吳玲慧&nbsp;</td>
+                        <td>lhwu@nccu.edu.tw&nbsp;</td>
+                        <td>分類報導訊息研究-財經新聞&nbsp;</td>
+                        <td><a href="viewTime.placernt?pce=102&amp;appno=2016000412">2016/02/23-2016/06/21</a>&nbsp;</td>
+                </tr>
+          
+                <tr>
+
+                        <td>2016000342&nbsp;</td>
+                        <td>傳播學院傳播碩士學位&nbsp;</td>
+                        <td>劉正華              &nbsp;</td>
+                        <td>67123&nbsp;</td>
+                        <td>alladin@nccu.edu.tw&nbsp;</td>
+                        <td>想像與書寫&nbsp;</td>
+                        <td><a href="viewTime.placernt?pce=102&amp;appno=2016000342">2016/02/24-2016/06/22</a>&nbsp;</td>
+                </tr>
+
+                <tr>
+
+                        <td>2016000299&nbsp;</td>
+                        <td>廣電系              &nbsp;</td>
+                        <td>陳友芳              &nbsp;</td>
+                        <td>63902&nbsp;</td>
+                        <td>vivi@nccu.edu.tw&nbsp;</td>
+                        <td>圖像、影像與知識傳播&nbsp;</td>
+                        <td><a href="viewTime.placernt?pce=102&amp;appno=2016000299">2016/02/25-2016/06/23</a>&nbsp;</td>
+                </tr>
+                                          
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div><!--/.row-->  
+    
+    
+  </div><!--/.main-->
+
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/chart.min.js"></script>
+  <script src="js/chart-data.js"></script>
+  <script src="js/easypiechart.js"></script>
+  <script src="js/easypiechart-data.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/bootstrap-table.js"></script>
+  <script>
+    !function ($) {
+      $(document).on("click","ul.nav li.parent > a > span.icon", function(){      
+        $(this).find('em:first').toggleClass("glyphicon-minus");    
+      }); 
+      $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+      if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+      if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+  </script> 
+</body>
+
+</html>

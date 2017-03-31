@@ -7,10 +7,18 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 
 var routes = require('./routes/index');
+var users = require('./routes/users');
+var article = require('./routes/article');
 var register = require('./routes/register');
 var login = require('./routes/login');
-var users = require('./routes/users');
-var article = require('./routes/article')
+var DateBetween = require('./routes/DateBetween');
+var register_error = require('./routes/register_error');
+var login_error_mistake = require('./routes/login_error_mistake');
+var login_error_noaccount = require('./routes/login_error_noaccount');
+var Capacity = require('./routes/Capacity');
+var applyFirstPage = require('./routes/applyFirstPage');
+//var applySecondPage = require('./routes/applySecondPage');
+var applyThirdPage = require('./routes/applyThirdPage');
 
 var app = express();
 
@@ -32,6 +40,14 @@ app.use('/users', users);
 app.use('/article', article);
 app.use('/register', register);
 app.use('/login', login);
+app.use('/Capacity', Capacity);
+app.use('/DateBetween', DateBetween);
+app.use('/applyFirstPage', applyFirstPage);
+//app.use('/applySecondPage', applySecondPage);
+app.use('/applyThirdPage', applyThirdPage);
+app.use('/register_error', register_error);
+app.use('/login_error_mistake', login_error_mistake);
+app.use('/login_error_noaccount', login_error_noaccount);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

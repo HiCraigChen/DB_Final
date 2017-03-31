@@ -31,16 +31,36 @@ router.post('/', function(req, res, next) {
     account : req.body.account,
     password : req.body.password
   });
-  newMember.save(function(err) {
-    if(err) {
-      next(err);
-    } else {
-      //再重新導向之前，我們要讓使用者登入，因此我們需要使用到session
-      req.session.member = newMember;
-      res.redirect('/');
-    }
-  });
+
+  var member;
+  var db = require('../libs/db');
+  db.select()
+    .from('member')
+    .where({
+      account : newMember.account
+    })
+    .map(function(row) {
+      //將select出來的資料轉換成Member物件
+      //如果沒有此account的method
+      member = new Member(row);
+      res.redirect('/register_error');  
+    })
+    .then(function(){
+      if(member===undefined){
+        newMember.save(function(err) {
+          if(err) {
+            next(err);
+          } else {
+            //再重新導向之前，我們要讓使用者登入，因此我們需要使用到session
+            req.session.member = newMember;
+            res.redirect('/');
+          }
+        });
+      };
+    });
 });
+
+
 
 router.post('/logout', function(req, res, next) {
   req.session.member = null;

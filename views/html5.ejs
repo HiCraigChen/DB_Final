@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+
+<table class="table">
+
+ <thead>
+      <tr>
+        <th>F_ID</th>
+        <th>F_B_Number</th>
+         <th>F_R_Number</th>
+         <th>F_NAME</th>
+         <th>F_LEVEL</th>
+         <th>Capacity</th>
+         <th>Management_Unit</th>
+         <th>Maintainer_ID</th>
+        
+      </tr>
+      </thead>
+ <% CapacityList.forEach(function(facility_t) { %>
+ 
+    
+    <tbody>
+      <tr>
+        <td> <%= facility_t.F_ID %></a></td>
+        <td> <%= facility_t.F_B_Number %></a></td>
+        <td> <%= facility_t.F_R_Number %></a></td>
+        <td> <%= facility_t.F_NAME %></a></td>
+        <td> <%= facility_t.F_LEVEL %></a></td>
+        <td> <%= facility_t.Capacity %></a></td>
+        <td> <%= facility_t.Management_Unit %></a></td>
+        <td> <%= facility_t.Maintainer_ID %></a></td>
+       
+      </tr>
+      
+    </tbody>
+            <%  }); %>  
+
+ </table>
+
+
+
+</body>
+</html>

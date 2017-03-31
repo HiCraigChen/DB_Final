@@ -1,0 +1,58 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+<table class="table">
+
+ <thead>
+      <tr>
+        <th>F_ID</th>
+        <th>Day</th>
+        <th>Date</th>
+         <th>Time</th>
+         <th>Available</th>
+          <th>Capacity</th>
+          <th>Building</th>
+
+        
+        
+      </tr>
+      </thead>
+ <% DateBetweenList.forEach(function(facilitytime_t) { %>
+ 
+  
+                       
+                    
+                             
+    <tbody>
+      <tr>
+      
+        <td> <%= facilitytime_t.F_ID %></a></td>
+        <td><%= facilitytime_t.Date.getDay() %></td>
+        <td> <%= facilitytime_t.Date.getFullYear() %> /<%= facilitytime_t.Date.getMonth() %>/ <%= facilitytime_t.Date.getDate() %></a></td>
+        <td> <%= facilitytime_t.Time %></a></td>
+        <td> <%= facilitytime_t.Available %></a></td>
+        <td> <%= facilitytime_t.Capacity %></a></td>
+        <td> <%= facilitytime_t.F_B_Name %></a></td>
+       
+      
+      </tr>
+      
+    </tbody>
+     
+            <%  }); %>  
+
+ </table>
+
+</body>
+</html>
+
